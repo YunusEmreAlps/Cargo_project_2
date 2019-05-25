@@ -1046,7 +1046,7 @@ void f_read()
 
     if(p_count == 0)
     {
-        f_size = filelength(fileno(data))/ sizeof(struct person) ;
+        f_size = filelength(fileno(data))/ (sizeof(struct person) + sizeof(struct fee)) ;
         p_count += f_size ;
 
         printf(" \n - %d \n ",f_size) ;
